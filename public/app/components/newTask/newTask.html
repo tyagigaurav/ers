@@ -1,0 +1,24 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-6">
+         <h2>Tasks </h2>
+         <div class="list-group list-cust">
+            <ul style="padding:0px">
+               <li class="list-group-item" ng-repeat='task in tasks' ng-class="{active : activeTask === task}"  ng-click="selectedTask(task)">
+                  {{task}}
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <h2>Members </h2>
+         <div class="list-group list-cust">
+            <ul style="padding:0px">
+               <li class="list-group-item" ng-repeat='member in members' ng-class="{active : activeMember === member}"  ng-click="selectedMember(member)">
+                  {{member}}
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
