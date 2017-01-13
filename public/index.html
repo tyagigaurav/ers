@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
    <head>
+       <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.js"></script>
       <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
-      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <script src="/bower_components/jquery/dist/jquery.js"></script>
       <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+       
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+    <!-- endbower -->
+       
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+       
       <script src="app/app.js"></script>
+       <link href="dash.css" rel="stylesheet">
       <script src="app/components/newTask/newTask.js"></script>
       <script src="app/components/newTask/newTaskController.js"></script>
       <script src="app/shared/services/tasksService.js" ></script>
       <script src="app/shared/services/membersService.js" ></script>
       <script src="app/components/login/login.js"></script>
       <script src="app/components/login/loginController.js"></script>
+       <script src="app/components/dashboard.user/dashboard.user.js"></script>
    </head>
    <body>
       <div id="main">
