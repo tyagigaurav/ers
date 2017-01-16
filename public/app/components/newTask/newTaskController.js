@@ -4,14 +4,11 @@ ersApp.controller('newTaskCtrl', function($scope, tasksService, membersService) 
     $scope.activeMember;
 
     tasksService.getAllTasks().then(function(data) {
-        $scope.tasks = data.tasks;
+        $scope.tasks = data;
     });
 
     membersService.getAllMembers().then(function(data) {
-        $scope.members = [];
-        for (i = 0; i < data.length; i++) {
-            $scope.members.push(data[i].name);
-        }
+        $scope.members = data;
     });
 
     $scope.selectedTask = function(value) {

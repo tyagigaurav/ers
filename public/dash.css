@@ -103,3 +103,10 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+ul
+{
+  max-height: 300px;
+  max-width: 400px;
+  overflow-y: scroll;
+}

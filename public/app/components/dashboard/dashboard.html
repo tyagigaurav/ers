@@ -1,0 +1,40 @@
+<div>
+
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="#">Hi, {{name}}</a>
+         </div>
+         <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+               <!--<li><a href="#">Dashboard</a></li>
+               <li><a href="#">Settings</a></li>
+               <li><a href="#">Profile</a></li>-->
+               <li><a href="#">Log Out</a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar" ng-show="isActive('manager')">
+               <li ng-class="{active: state.includes('dashboard.tasks')}"><a ui-sref="dashboard.tasks">Tasks</a></li>
+               <li ng-class="{active: state.includes('dashboard.newTask')}"><a ui-sref="dashboard.newTask">New Task</a></li>
+               <li ng-class="{active: state.includes('dashboard.team')}"><a ui-sref="dashboard.team">Team</a></li>
+            </ul>
+            <ul class="nav nav-sidebar" ng-show="isActive('admin')">
+               <li class="active"><a href="">Group of Activities</a></li>
+               <li><a href="">Allot N Coins</a></li>
+            </ul>
+            <ul class="nav nav-sidebar" ng-show="isActive('user')">
+               <li class="active"><a href="">View Tasks</a></li>
+            </ul>
+         </div>
+         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div ui-view></div>
+         </div>
+      </div>
+   </div>
+</div>

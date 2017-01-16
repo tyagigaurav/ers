@@ -1,0 +1,19 @@
+{
+    "id": 6,
+    "value": 155,
+    "age": 20,
+    "name": "Huber Ellis",
+    "gender": "male",
+    "email": "huberellis@bitrex.com",
+    "totalTasks": 6,
+    "completedTasks": 2,
+    "tasks": [
+        { "name":"Task 1", "date":"12-25-2016","status":"Completed","value":20 },
+        { "name":"Task 2", "date":"12-25-2017","status":"Assigned","value":50 },
+        { "name":"Task 3", "date":"01-25-2017","status":"Assigned","value":10 },
+        { "name":"Task 5", "date":"12-25-2016","status":"Assigned","value":80 },
+        { "name":"Task 6", "date":"12-25-2011","status":"Assigned","value":14 },
+        { "name":"Task 8", "date":"12-25-2016","status":"Completed","value":19 }
+    ],
+    "address": "420 Cedar Street, Avalon, Oklahoma, 8058"
+}

@@ -1,0 +1,25 @@
+<div class="container">
+   <div class="row">
+   <h2>Team Members </h2>
+      <table class="table table-hover">
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Age</th>
+               <th>Total Tasks</th>
+               <th>Completed Tasks</th>
+               <th>Balance</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr ng-repeat="member in members | orderBy:'name'" >
+               <td><a ng-click=loadUser(6)>{{member.name}}</a></td>
+               <td>{{member.age}}</td>
+               <td>{{member.totalTasks}}</td>
+               <td>{{member.completedTasks}}</td>
+               <td>{{member.value}}</td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>

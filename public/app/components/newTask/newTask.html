@@ -4,8 +4,8 @@
          <h2>Tasks </h2>
          <div class="list-group list-cust">
             <ul style="padding:0px">
-               <li class="list-group-item" ng-repeat='task in tasks' ng-class="{active : activeTask === task}"  ng-click="selectedTask(task)">
-                  {{task}}
+               <li class="list-group-item" ng-repeat="task in tasks | orderBy: '-value'" ng-class="{active : activeTask === task}"  ng-click="selectedTask(task)">
+                  {{task.name + " (Value: " + task.value +")"}}
                </li>
             </ul>
          </div>
@@ -15,10 +15,11 @@
          <div class="list-group list-cust">
             <ul style="padding:0px">
                <li class="list-group-item" ng-repeat='member in members' ng-class="{active : activeMember === member}"  ng-click="selectedMember(member)">
-                  {{member}}
+                  {{member.name}}
                </li>
             </ul>
          </div>
       </div>
+      <button type="button" class="btn-lg btn-success btn-block">Assign</button>
    </div>
 </div>
