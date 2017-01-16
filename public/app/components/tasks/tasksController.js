@@ -8,7 +8,7 @@ ersApp.controller('tasksCtrl', function($scope, $state, tasksService) {
 
     $scope.imgSrc = function(status){
 
-        path = '../../../assets/img/' + status.toLowerCase() + ".png";
+        path = '/assets/img/' + status.toLowerCase() + ".png";
 
         return path;
 

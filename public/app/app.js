@@ -7,5 +7,27 @@ ersApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 //   requireBase: false
 // });
     $urlRouterProvider.otherwise('/login');
+
+  });
+
+    ersApp.run(function ($rootScope, $state, loginService) {
+        
+    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+
+        var isLogin = toState.name === "login";
+        if(isLogin){
+           return;
+        }
+        
+        if (!loginService.isLoggedIn()) {
+            console.log('DENY');
+            event.preventDefault();
+            $state.go("login");
+             
+        }
+
+    });
+
+
     
-});
+    });

@@ -5,5 +5,5 @@ ersApp.config(function($stateProvider) {
             templateUrl: 'app/components/team/team.html',
             controller: 'teamCtrl'
 
-        });
+        })
 });

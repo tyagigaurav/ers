@@ -1,4 +1,4 @@
-<div class="container" ng-show="state.includes('dashboard.user')">
+<div class="container" ng-show="state.includes('dashboard.teamMember')">
    
    <div class="row">
    <div class="col-md-6"><h3>Name: {{user.name}}</h3></div>
@@ -34,6 +34,10 @@
                <td ng-show="state.includes('dashboard.tasks')">
                <button type="button" class="btn btn-success" ng-class="{disabled: task.status != 'Completed'}">Approve</button>
                <button type="button" class="btn btn-danger" ng-class="{disabled: task.status != 'Completed'}">Disapprove</button>
+               </td>
+                <td ng-show="state.includes('dashboard.user')">
+               <button type="button" class="btn btn-success" ng-class="{disabled: task.status == 'Completed' || task.status == 'Pending'}">Completed</button>
+               <button type="button" class="btn btn-danger" ng-class="{disabled: task.status == 'Completed' || task.status == 'Pending'}">Reject</button>
                </td>
             </tr>
          </tbody>

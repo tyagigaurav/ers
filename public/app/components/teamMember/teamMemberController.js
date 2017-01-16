@@ -1,6 +1,6 @@
-ersApp.controller('userCtrl', function($scope, $state, membersService) {
-
-	$scope.state = $state;
+ersApp.controller('teamMemberCtrl', function($scope, $state, membersService) {
+    
+    $scope.state = $state;
 
 	membersService.getUser().then(function(data) {
 		$scope.user = data;
@@ -14,5 +14,5 @@ ersApp.controller('userCtrl', function($scope, $state, membersService) {
 		return path;
 
 	};
-	
+    
 });

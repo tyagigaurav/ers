@@ -1,28 +1,12 @@
-<div>
-
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Hi, {{name}}</a>
-         </div>
-         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-               <!--<li><a href="#">Dashboard</a></li>
-               <li><a href="#">Settings</a></li>
-               <li><a href="#">Profile</a></li>-->
-               <li><a href="#">Log Out</a></li>
-            </ul>
-         </div>
-      </div>
-   </nav>
-
-   <div class="container-fluid">
+<div ng-include="'app/shared/view/header.html'"></div>
+ 
+<div class="container-fluid">
       <div class="row">
          <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar" ng-show="isActive('manager')">
                <li ng-class="{active: state.includes('dashboard.tasks')}"><a ui-sref="dashboard.tasks">Tasks</a></li>
                <li ng-class="{active: state.includes('dashboard.newTask')}"><a ui-sref="dashboard.newTask">New Task</a></li>
-               <li ng-class="{active: state.includes('dashboard.team')}"><a ui-sref="dashboard.team">Team</a></li>
+               <li ng-class="{active: state.includes('dashboard.team') || state.includes('dashboard.teamMember')}"><a ui-sref="dashboard.team">Team</a></li>
             </ul>
             <ul class="nav nav-sidebar" ng-show="isActive('admin')">
                <li class="active"><a href="">Group of Activities</a></li>
@@ -37,4 +21,3 @@
          </div>
       </div>
    </div>
-</div>
