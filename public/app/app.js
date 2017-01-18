@@ -1,4 +1,4 @@
-var ersApp = angular.module('ersApp', ['ui.router', 'chart.js']);
+var ersApp = angular.module('ersApp', ['ui.router', 'chart.js', 'ngAnimate']);
 
 ersApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 

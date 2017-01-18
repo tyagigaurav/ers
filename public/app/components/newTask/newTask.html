@@ -3,7 +3,7 @@
          <h2>Tasks </h2>
          <div class="list-group">
             <ul style="padding:0px;max-height: 400px;overflow-y: scroll;" >
-               <li class="list-group-item" ng-repeat="task in tasks | orderBy: '-value'" ng-class="{active : activeTask === task}"  ng-click="selectedTask(task)">
+               <li class="list-group-item" ng-repeat="task in tasks | orderBy: '-value'" ng-class="{active : task.active}"  ng-click="selectedTask(task)">
                   {{task.name + " (Value: " + task.value +")"}}
                </li>
             </ul>
@@ -20,6 +20,12 @@
          </div>
       </div>
    </div>
+    <div class="row" style="text-align: center" ng-hide="buttonDisabled()">
+        <h3>Task Description</h3>
+        <textarea rows="5" cols="100">
+        </textarea>
+        </div>
+    <br/>
    <div class="row" style="text-align: center">
          <button type="button" class="btn btn-lg btn-success" ng-click="assignTask()" ng-class="{disabled: buttonDisabled()}">Assign</button>
    </div>

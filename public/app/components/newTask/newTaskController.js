@@ -1,7 +1,7 @@
 ersApp.controller('newTaskCtrl', function($scope, tasksService, membersService) {
 
-    $scope.activeTask;
-    $scope.activeMember;
+    $scope.activeTask = null;
+    $scope.activeMember = [];
 
     $scope.buttonDisabled = function()
     {
@@ -21,8 +21,10 @@ ersApp.controller('newTaskCtrl', function($scope, tasksService, membersService) 
         $scope.members = data;
     });
 
-    $scope.selectedTask = function(value) {
-        $scope.activeTask = value;
+    $scope.selectedTask = function(task) {
+        
+        task.active = !task.active;
+        //$scope.activeTask = value;
         $scope.buttonDisabled();
     };
     $scope.selectedMember = function(value) {
