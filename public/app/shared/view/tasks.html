@@ -36,7 +36,7 @@
                <button type="button" class="btn btn-danger" ng-class="{disabled: task.status != 'Completed'}">Disapprove</button>
                </td>
                 <td ng-show="state.includes('root.user')">
-               <button type="button" class="btn btn-success" ng-class="{disabled: task.status == 'Completed' || task.status == 'Expired'}">Completed</button>
+               <button type="button" class="btn btn-success" ng-class="{disabled: task.status == 'Completed' || task.status == 'Expired'}">Complete</button>
                <button type="button" class="btn btn-danger" ng-class="{disabled: task.status == 'Completed' || task.status == 'Expired'}">Reject</button>
                </td>
             </tr>

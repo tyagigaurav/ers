@@ -1,0 +1,25 @@
+   <div class="row">
+<h2>Allot N Coins </h2>
+      <table class="table">
+         <thead>
+            <tr>
+               <th>Manager</th>
+               <th>Current Balance</th>
+               <th>Add N Coins</th>
+               <th></th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr ng-repeat="manager in managers | orderBy:'+name' | limitTo: 8">
+               <td>{{manager.name}}</td>
+               <td>{{manager.value}}</td>
+               <td>
+                  <input type="text" placeholder="Enter Value" ng-model="manager.allotedcoins" value="0" />
+               </td>
+               <td>
+               <button type="button" class="btn btn-success">Allot</button>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>

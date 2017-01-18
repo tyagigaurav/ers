@@ -9,8 +9,8 @@
                <li ng-class="{active: state.includes('root.team') || state.includes('root.teamMember')}"><a ui-sref="root.team">Team</a></li>
             </ul>
             <ul class="nav nav-sidebar" ng-show="isActive('admin')">
-               <li class="active"><a href="">Group of Activities</a></li>
-               <li><a href="">Allot N Coins</a></li>
+               <li><a href="#">Group of Activities</a></li>
+               <li ng-class="{active: state.includes('root.allotCoins')}"><a ui-sref="root.allotCoins">Allot N Coins</a></li>
             </ul>
             <ul class="nav nav-sidebar" ng-show="isActive('user')">
                <li class="active"><a href="">View Tasks</a></li>

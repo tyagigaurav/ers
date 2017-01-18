@@ -14,11 +14,11 @@ ersApp.controller('layoutCtrl', function($scope, $state, tasksService, membersSe
         
     }else if($scope.role == "admin"){
        
-        $state.go("root.admin");
+        $state.go("root.allotCoins");
         
     }else if($scope.role == "user"){
        
-        $state.go("root.user");
+        $state.go("root.user", {"userId":7});
     }
 
 	$scope.isActive = function(role){
