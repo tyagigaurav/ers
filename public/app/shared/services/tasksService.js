@@ -15,4 +15,21 @@ ersApp.service('tasksService', ['$http', '$q', function($http, $q) {
 
         return defer.promise;
     }
+
+    this.assignTask = function(tasks, members){
+        
+        var defer = $q.defer();
+        var data={};
+        data.tasks = tasks;
+        data.members = members;
+
+        $http.post('/assignTask', data).then(function(response) {
+            return defer.resolve(response.data);
+        }, function(response) {
+            defer.reject(response);
+        });
+
+        return defer.promise;
+    };
+
 }]);

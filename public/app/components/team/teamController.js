@@ -5,7 +5,7 @@ ersApp.controller('teamCtrl', function($scope, $state, membersService) {
     });
 
     $scope.loadUser = function (userId) {
-    	$state.go("dashboard.teamMember", {'userId':userId});
+    	$state.go("root.teamMember", {'userId':userId});
     }
     
 });

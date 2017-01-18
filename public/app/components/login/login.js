@@ -4,11 +4,6 @@ ersApp.config(function($stateProvider) {
             url: '/login',
             templateUrl: 'app/components/login/login.html',
             controller : 'loginCtrl',
-            onEnter: function($location, loginService){
-            if(loginService.isLoggedIn()){
-                $location.path('/dashboard');
-            }
-    }
-
+            
         });
 });

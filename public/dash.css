@@ -3,14 +3,14 @@
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 50px;
-}
-
 
 /*
  * Global add-ons
  */
+
+body {
+  padding-top: 50px;
+}
 
 .sub-header {
   padding-bottom: 10px;
@@ -23,6 +23,19 @@ body {
  */
 .navbar-fixed-top {
   border: 0;
+}
+
+#header-ers a{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.42857143;
+    color: #FFFFFF;
+}
+
+#header-ers a:hover,
+#header-ers a:focus {
+  color: #FFFF00;
+
 }
 
 /*
@@ -71,9 +84,7 @@ body {
  * Main content
  */
 
-.main {
-  padding: 20px;
-}
+
 @media (min-width: 768px) {
   .main {
     padding-right: 40px;
@@ -102,11 +113,4 @@ body {
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
-}
-
-ul
-{
-  max-height: 300px;
-  max-width: 400px;
-  overflow-y: scroll;
 }

@@ -7,7 +7,7 @@ ersApp.service('loginService', ['$http', '$q', function($http, $q) {
         data.username = username;
         data.password = password;
 
-		$http.get('app/mockData/login.json', data).then(function(response) {
+		$http.post('/authenticate', data).then(function(response) {
             if(response.data.role != null){
                 localStorage.setItem("role", response.data.role);
                 localStorage.setItem("token", response.data.token);   
