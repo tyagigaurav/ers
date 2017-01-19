@@ -1,11 +1,11 @@
 ersApp.service('loginService', ['$http', '$q', function($http, $q) {
     
-    this.login = function(username, password){
+    this.login = function(credentials){
         
         var defer = $q.defer();
         var data={};
-        data.username = username;
-        data.password = password;
+        data.username = credentials.username;
+        data.password = credentials.password;
 
 		$http.post('/authenticate', data).then(function(response) {
             if(response.data.role != null){

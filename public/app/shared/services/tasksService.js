@@ -32,4 +32,18 @@ ersApp.service('tasksService', ['$http', '$q', function($http, $q) {
         return defer.promise;
     };
 
+    this.getAssigneeTasksByAssignor = function() {
+
+        var defer = $q.defer();
+
+        $http.get('app/mockData/getassigneebyassignor.json').then(function(response) {
+            return defer.resolve(response.data);
+        }, function(response) {
+            defer.reject(response);
+        });
+
+        return defer.promise;
+
+    };
+
 }]);

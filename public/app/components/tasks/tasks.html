@@ -1,4 +1,4 @@
-<!--<div class="container">
+<div class="container">
    <div class="row">
    <h2>Tasks </h2>
       <table class="table table-hover">
@@ -13,11 +13,11 @@
          </thead>
          <tbody>
             <tr ng-repeat="task in tasks | orderBy:'-date'" >
-               <td>{{task.name}}</td>
-               <td>{{task.date.format("MM-DD-YYYY")}}</td>
+               <td>{{task.taskName}}</td>
+               <td>24/11/2016</td>
                <td>{{task.status}}
                <img ng-src="{{imgSrc(task.status)}}" height="20" width="20" title="{{task.status}}"></td>
-               <td>{{task.value}}</td>
+               <td>{{task.taskValue}}</td>
                <td ng-show="state.includes('root.tasks')">
                <button type="button" class="btn btn-success" ng-class="{disabled: task.status != 'Completed'}">Approve</button>
                <button type="button" class="btn btn-danger" ng-class="{disabled: task.status != 'Completed'}">Disapprove</button>
@@ -27,4 +27,3 @@
       </table>
    </div>
 </div>
--->

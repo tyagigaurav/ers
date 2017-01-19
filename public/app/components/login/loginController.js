@@ -6,13 +6,13 @@ ersApp.controller('loginCtrl', function($scope, $stateParams, $state, loginServi
 
   $scope.formSubmit = function() {
 
-    loginService.login($scope.username, $scope.password).then(function(data) {
+    loginService.login($scope.credentials).then(function(data) {
 
       if(data.role) {
 
         $scope.error = '';
-        $scope.username = '';
-        $scope.password = '';
+        $scope.credentials.username = '';
+        $scope.credentials.password = '';
         $state.go("root");
 
       } else {

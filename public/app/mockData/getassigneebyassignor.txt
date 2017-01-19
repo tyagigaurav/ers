@@ -1,0 +1,25 @@
+[
+  '{{repeat(1, 6)}}',
+  {
+    assignorId: '{{integer(100, 300)}}',
+      members: [
+        '{{repeat(2,5)}}',
+        {
+          assigneeId: '{{index()}}',
+          assigneeName: '{{firstName()}} {{surname()}}',
+          tasks: [
+            '{{repeat(2,5)}}',
+            {
+            taskId: '{{index()}}',
+            taskName: 'Task ' + '{{firstName()}} {{surname()}}',
+            taskValue: '{{integer(20, 40)}}',
+            status: function (tags) {
+              var avStatus = ['Pending', 'Completed', 'Assigned'];
+              return avStatus[tags.integer(0, avStatus.length - 1)];
+            }    
+          }
+        ]
+      }
+    ]
+  }
+]
