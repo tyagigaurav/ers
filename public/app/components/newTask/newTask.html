@@ -3,7 +3,7 @@
          <h2>Tasks </h2>
          <div class="list-group">
             <ul style="padding:0px;max-height: 400px;overflow-y: scroll;" >
-               <li class="list-group-item" ng-repeat="task in tasks | orderBy: '-value'" ng-class="{active : task.active}"  ng-click="selectedTask(task)">
+               <li class="list-group-item new-tasks" id="{{task.id}}" ng-repeat="task in tasks | orderBy: '-value'" ng-class="{active : contains($event)}"  ng-click="modifylist($event)">
                   {{task.name + " (Value: " + task.value +")"}}
                </li>
             </ul>
@@ -13,7 +13,7 @@
          <h2>Members </h2>
          <div class="list-group">
             <ul style="padding:0px;max-height: 400px;overflow-y: scroll;">
-               <li class="list-group-item" ng-repeat='member in members' ng-class="{active : activeMember === member}"  ng-click="selectedMember(member)">
+               <li class="list-group-item new-members" id="{{member.id}}" ng-repeat='member in members' ng-class="{active : contains($event, member.id)}"  ng-click="modifylist($event, member)">
                   {{member.name}}
                </li>
             </ul>
