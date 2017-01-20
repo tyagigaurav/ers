@@ -1,5 +1,6 @@
 {
     "token": 4562,
     "message": "Successfuly logged in",
-    "role": "manager"
+    "role": "manager",
+    "userId": 100
 }

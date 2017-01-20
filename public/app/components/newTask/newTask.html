@@ -2,9 +2,9 @@
       <div class="col-md-6">
          <h2>Tasks </h2>
          <div class="list-group">
-            <ul style="padding:0px;max-height: 300px;overflow-y: scroll;" >
+            <ul style="padding:0px;max-height: 350px;overflow-y: scroll;" >
                <li class="list-group-item new-tasks" ng-repeat="task in tasks | orderBy: '-value'" ng-class="{active : task.id == activeTaskId}"  ng-click="activateTask(task.id)">
-                  {{task.name + " (Value: " + task.value +")"}}
+                  {{task.act_name + " (Value: " + task.ncoin_qty +")"}}
                </li>
             </ul>
          </div>
@@ -12,7 +12,7 @@
       <div class="col-md-6">
          <h2>Members </h2>
          <div class="list-group">
-            <ul style="padding:0px;max-height: 300px;overflow-y: scroll;">
+            <ul style="padding:0px;max-height: 350px;overflow-y: scroll;">
                <li class="list-group-item new-members" ng-repeat='member in members' ng-class="{active : activeMemberIds.indexOf(member.id) > -1}"  ng-click="activateMembers(member.id)">
                   {{member.name}}
                </li>
@@ -20,12 +20,12 @@
          </div>
       </div>
    </div>
-    <div class="row" style="text-align: center" ng-hide="buttonDisabled()">
+    <div class="row" style="text-align: center" ng-hide="isDisabled()">
         <h3>Task Description</h3>
-        <textarea rows="5" cols="100">
+        <textarea rows="5" cols="100" ng-model="description">
         </textarea>
         </div>
     <br/>
    <div class="row" style="text-align: center;margin-bottom: 30px">
-         <button type="button" class="btn btn-lg btn-success" ng-click="assignTask()" ng-class="{disabled: buttonDisabled()}">Assign</button>
+         <button type="button" class="btn btn-lg btn-success" ng-click="assignTask()" ng-class="{disabled: isDisabled()}">Assign</button>
    </div>

@@ -18,27 +18,31 @@ app.post('/authenticate', function(req, res){
     var data = {};
     if(req.body.username == "admin" && req.body.password == "admin")
     {
-    	data.message = "Login Succesful";
+    	data.message = "You have successfully logged in!";
     	data.token = 90;
     	data.role = "admin";
+        data.userId = 100;
     }
     else if(req.body.username == "user" && req.body.password == "user")
     {
-    	data.message = "Login Succesful";
+    	data.message = "You have successfully logged in!";
     	data.token = 70;
     	data.role = "user";
+        data.userId = 100;
     }
     else if(req.body.username == "manager" && req.body.password == "manager")
     {
-    	data.message = "Login Succesful";
+    	data.message = "You have successfully logged in!";
     	data.token = 11;
     	data.role = "manager";
+        data.userId = 100;
     }
     else
     {
-    	data.message = "Incorrect Username and Password";
+    	data.message = "Incorrect Username and Password. Try Again!";
     	data.token = null;
-    	data.role = null;	
+    	data.role = null;
+        data.userId = 100;
     }
     //mimic a slow network connection
     setTimeout(function(){
@@ -51,8 +55,9 @@ app.post('/authenticate', function(req, res){
   app.post('/assignTask', function(req, res){
     res.setHeader('Content-Type', 'application/json');
     var data = {};
-    data.message = "Task Assigned";
+    data.message = "Activity Asssigned to Assignee!";
     res.send(JSON.stringify(data));
   });
+
    app.listen(8088);
    console.log("application listing on port 8088");

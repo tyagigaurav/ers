@@ -1,4 +1,4 @@
-ersApp.controller('loginCtrl', function($scope, $stateParams, $state, loginService) {
+ersApp.controller('loginCtrl', function($scope, $stateParams, $state, loginService, ngNotify) {
 
   if(loginService.isLoggedIn()){
     $state.go("root");
@@ -13,10 +13,11 @@ ersApp.controller('loginCtrl', function($scope, $stateParams, $state, loginServi
         $scope.error = '';
         $scope.credentials.username = '';
         $scope.credentials.password = '';
+        ngNotify.set(data.message, 'success');
         $state.go("root");
 
       } else {
-        $scope.error = data.message;
+          ngNotify.set(data.message, 'error');
       }  
     });
 

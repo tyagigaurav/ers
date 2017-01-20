@@ -10,8 +10,9 @@ ersApp.service('loginService', ['$http', '$q', function($http, $q) {
 		$http.post('/authenticate', data).then(function(response) {
             if(response.data.role != null){
                 localStorage.setItem("role", response.data.role);
-                localStorage.setItem("token", response.data.token);   
-                }
+                localStorage.setItem("token", response.data.token);
+                localStorage.setItem("userId", response.data.userId);
+            }
 
 			return defer.resolve(response.data);
 		}, function(response) {
