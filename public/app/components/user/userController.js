@@ -1,23 +1,27 @@
-ersApp.controller('userCtrl', function($scope, $state, membersService) {
+ersApp.controller('userCtrl', function($scope, $state, activityService, ngNotify) {
 
 	$scope.state = $state;
+	$scope.userId = $scope.$parent.userId;
 
-	membersService.getUser().then(function(data) {
+	$scope.loadActivities = function(){
 
-		$scope.user = data;
-		$scope.tasks = $scope.user.tasks;
+	activityService.getActivitiesByAssignee($scope.userId).then(function(data) {
 
-		_.each($scope.tasks, function(task)
+		$scope.activities = data;
+
+		_.each($scope.activities, function(activity)
 		{
-			if(task.date < moment())
+			if(activity.date < moment())
 			{
-				if(task.status == "Assigned")
+				if(activity.status == "Assigned")
 				{
-					task.status = "Expired";
+					activity.status = "Expired";
 				}
 			}
 		});
 	}); 
+
+	}
 
 	$scope.imgSrc = function(status){
 
@@ -26,5 +30,20 @@ ersApp.controller('userCtrl', function($scope, $state, membersService) {
 		return path;
 
 	};
+
+	$scope.actionOnActivity = function(activity, action){
+
+		var data = [{
+            activity_id: activity.id,
+            action: action
+        }];
+
+        activityService.actionOnActivity(data).then(function(data) {
+            ngNotify.set(data.message, 'success');
+            $scope.loadActivities();
+        });
+    }
+
+    $scope.loadActivities();
 	
 });

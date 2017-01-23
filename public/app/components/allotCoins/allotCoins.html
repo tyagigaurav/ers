@@ -1,25 +1,33 @@
-   <div class="row">
+<div class="container">
+<div class="row">
 <h2>Allot N Coins </h2>
       <table class="table">
          <thead>
             <tr>
+               <th><input type="checkbox" ng-click="toggleAll()" ng-model="isAllSelected"></th>
                <th>Manager</th>
                <th>Current Balance</th>
-               <th>Add N Coins</th>
-               <th></th>
+               <th>Add N Coins 
+               </th>
+               <th>Action</th>
             </tr>
          </thead>
          <tbody>
-            <tr ng-repeat="manager in managers | orderBy:'+name' | limitTo: 8">
+            <tr ng-repeat="manager in managers | orderBy:'+name'">
+               <td><input type="checkbox" ng-model="manager.selected"></td>
                <td>{{manager.name}}</td>
                <td>{{manager.value}}</td>
                <td>
-                  <input type="text" placeholder="Enter Value" ng-model="manager.allotedcoins" value="0" />
+                  <input class="allot-coins form-control" type="text" placeholder="Enter Value" ng-model="manager.allotedcoins">
                </td>
                <td>
-               <button type="button" class="btn btn-success">Allot</button>
+               <button type="button" class="btn btn-success" ng-click="allotCoins(manager)">Allot</button>
                </td>
             </tr>
          </tbody>
       </table>
+       <input class="allot-coins form-control" type="text" placeholder="Enter Value for all" ng-model="allCoins" style="width:20%">
+       <br/>
+       <button type="button" class="btn btn-lg btn-success" ng-click="allotCoinsToAll()">Allot to Selected</button>
    </div>
+</div>

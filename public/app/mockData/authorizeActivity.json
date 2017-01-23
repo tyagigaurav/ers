@@ -1,0 +1,185 @@
+[
+  {
+    "id": 0,
+    "name": "Mayra Levine",
+    "activities": [
+      {
+        "id": 0,
+        "name": "Activity 0",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Alisha Holden",
+        "value": 57
+      },
+      {
+        "id": 1,
+        "name": "Activity 1",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Dean Roberts",
+        "value": 65
+      },
+      {
+        "id": 2,
+        "name": "Activity 2",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Riley Short",
+        "value": 53
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Kaitlin Evans",
+    "activities": [
+      {
+        "id": 0,
+        "name": "Activity 0",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Parks Guthrie",
+        "value": 54
+      },
+      {
+        "id": 1,
+        "name": "Activity 1",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Brennan Sandoval",
+        "value": 68
+      },
+      {
+        "id": 2,
+        "name": "Activity 2",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Lessie Reid",
+        "value": 69
+      },
+      {
+        "id": 3,
+        "name": "Activity 3",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Blake Barr",
+        "value": 63
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Small Atkinson",
+    "activities": [
+      {
+        "id": 0,
+        "name": "Activity 0",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Marisol Sellers",
+        "value": 67
+      },
+      {
+        "id": 1,
+        "name": "Activity 1",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Ester Pearson",
+        "value": 50
+      },
+      {
+        "id": 2,
+        "name": "Activity 2",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Terrie Abbott",
+        "value": 61
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pratt Pace",
+    "activities": [
+      {
+        "id": 0,
+        "name": "Activity 0",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Wood Vance",
+        "value": 56
+      },
+      {
+        "id": 1,
+        "name": "Activity 1",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Amie Chambers",
+        "value": 60
+      },
+      {
+        "id": 2,
+        "name": "Activity 2",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Stewart York",
+        "value": 67
+      },
+      {
+        "id": 3,
+        "name": "Activity 3",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Pauline Tucker",
+        "value": 63
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Lucia Herrera",
+    "activities": [
+      {
+        "id": 0,
+        "name": "Activity 0",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Hyde Walls",
+        "value": 55
+      },
+      {
+        "id": 1,
+        "name": "Activity 1",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Phillips Hooper",
+        "value": 60
+      },
+      {
+        "id": 2,
+        "name": "Activity 2",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Ebony Pennington",
+        "value": 52
+      },
+      {
+        "id": 3,
+        "name": "Activity 3",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Ashley Ayala",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Davidson Bradshaw",
+    "activities": [
+      {
+        "id": 0,
+        "name": "Activity 0",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Gaines Roman",
+        "value": 60
+      },
+      {
+        "id": 1,
+        "name": "Activity 1",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Myrtle Solomon",
+        "value": 53
+      },
+      {
+        "id": 2,
+        "name": "Activity 2",
+        "description": "Activity Description given by manager",
+        "assigned_to": "Brianna Mosley",
+        "value": 55
+      }
+    ]
+  }
+]

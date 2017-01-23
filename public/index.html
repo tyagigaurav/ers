@@ -3,7 +3,7 @@
    <head>
       
       <meta charset="utf-8">
-      <!-<base href="/">
+      <base href="/">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       
@@ -26,6 +26,10 @@
       <!-- endbower -->
       
        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular-animate.js"></script>
+
+       <!-- ng-table-->
+       <link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+       <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
        
        <script src="//cdn.jsdelivr.net/angular.ng-notify/0.6.0/ng-notify.min.js"></script>
        <link rel="stylesheet" href="//cdn.jsdelivr.net/angular.ng-notify/0.6.0/ng-notify.min.css" />
@@ -33,17 +37,17 @@
        
       <script src="app/app.js"></script>
       <link href="dash.css" rel="stylesheet" />
-       
-      <script src="app/shared/services/tasksService.js" ></script>
+        
+      <script src="app/shared/services/activityService.js" ></script>
       <script src="app/shared/services/membersService.js" ></script>
        <script src="app/shared/services/loginService.js" ></script>
        
-      <script src="app/components/newTask/newTask.js"></script>
-      <script src="app/components/newTask/newTaskController.js"></script>
+      <script src="app/components/newActivity/newActivity.js"></script>
+      <script src="app/components/newActivity/newActivityController.js"></script>
       <script src="app/components/layout/layout.js"></script>
       <script src="app/components/layout/layoutController.js"></script>
-      <script src="app/components/tasks/tasks.js"></script>
-      <script src="app/components/tasks/tasksController.js"></script>
+      <script src="app/components/activities/activities.js"></script>
+      <script src="app/components/activities/activitiesController.js"></script>
       <script src="app/components/team/team.js"></script>
       <script src="app/components/team/teamController.js"></script>
       <script src="app/components/teamMember/teamMember.js"></script>
@@ -54,6 +58,8 @@
       <script src="app/components/login/loginController.js"></script>
       <script src="app/components/allotCoins/allotCoins.js"></script>
       <script src="app/components/allotCoins/allotCoinsController.js"></script>
+      <script src="app/components/authorizeActivity/authorizeActivity.js"></script>
+      <script src="app/components/authorizeActivity/authorizeActivityController.js"></script>
 
    </head>
    

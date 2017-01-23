@@ -2,43 +2,31 @@
   {
     "id": 0,
     "name": "Hancock Coffey",
-    "total_activities": 9,
-    "completed_activities": 7,
     "value": 29
   },
   {
     "id": 1,
     "name": "Cornelia Lamb",
-    "total_activities": 9,
-    "completed_activities": 5,
     "value": 28
   },
   {
     "id": 2,
     "name": "Banks Williamson",
-    "total_activities": 9,
-    "completed_activities": 5,
     "value": 30
   },
   {
     "id": 3,
     "name": "Harris Weiss",
-    "total_activities": 10,
-    "completed_activities": 6,
     "value": 26
   },
   {
     "id": 4,
     "name": "Reilly Delgado",
-    "total_activities": 9,
-    "completed_activities": 6,
     "value": 27
   },
   {
     "id": 5,
     "name": "Kathrine Tyson",
-    "total_activities": 9,
-    "completed_activities": 5,
     "value": 29
   }
 ]

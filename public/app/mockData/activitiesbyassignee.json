@@ -1,0 +1,17 @@
+[
+    {"id":1, "name":"Activity 1", "date":"12-25-2016","status":"Completed","value":20, "description":"This is activity description given by HR/Manager"},
+    {"id":2, "name":"Activity 2", "date":"12-25-2017","status":"Assigned","value":50, "description":"This is activity description given by HR/Manager"},
+    {"id":3, "name":"Activity 3", "date":"01-25-2017","status":"Failed","value":10, "description":"This is activity description given by HR/Manager"},
+    {"id":4, "name":"Activity 4", "date":"12-25-2016","status":"Assigned","value":5, "description":"This is activity description given by HR/Manager"},
+    {"id":5, "name":"Activity 5", "date":"12-25-2016","status":"Failed","value":80, "description":"This is activity description given by HR/Manager"},
+    {"id":6, "name":"Activity 6", "date":"12-25-2011","status":"Failed","value":14, "description":"This is activity description given by HR/Manager"},
+    {"id":7, "name":"Activity 7", "date":"12-25-2018","status":"Assigned","value":17, "description":"This is activity description given by HR/Manager"},
+    {"id":8, "name":"Activity 8", "date":"12-25-2016","status":"Done","value":19, "description":"This is activity description given by HR/Manager"},
+    {"id":9, "name":"Activity 9", "date":"12-25-2017","status":"Completed","value":34, "description":"This is activity description given by HR/Manager"},
+    {"id":10, "name":"Activity 10", "date":"12-25-2016","status":"Done","value":16, "description":"This is activity description given by HR/Manager"},
+    {"id":11, "name":"Activity 11", "date":"01-25-2017","status":"Assigned","value":34, "description":"This is activity description given by HR/Manager"},
+    {"id":12, "name":"Activity 12", "date":"12-20-2016","status":"Completed","value":3, "description":"This is activity description given by HR/Manager"},
+    {"id":13, "name":"Activity 13", "date":"09-25-2016","status":"Failed","value":10, "description":"This is activity description given by HR/Manager"},
+    {"id":14, "name":"Activity 14", "date":"10-25-2016","status":"Done","value":9, "description":"This is activity description given by HR/Manager"},
+    {"id":15, "name":"Activity 15", "date":"11-25-2016","status":"Failed","value":8, "description":"This is activity description given by HR/Manager"}
+]

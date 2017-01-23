@@ -5,18 +5,16 @@
          <thead>
             <tr>
                <th>Name</th>
-               <th>Age</th>
-               <th>Total Tasks</th>
-               <th>Completed Tasks</th>
+               <th>Total Activities</th>
+               <th>Completed Activities</th>
                <th>Balance</th>
             </tr>
          </thead>
          <tbody>
             <tr ng-repeat="member in members | orderBy:'name'" >
-               <td><a ng-click=loadUser(6)>{{member.name}}</a></td>
-               <td>{{member.age}}</td>
-               <td>{{member.totalTasks}}</td>
-               <td>{{member.completedTasks}}</td>
+               <td><a ui-sref="root.teamMember({obj:member, userId:member.id})" >{{member.name}}</a></td>
+               <td>{{member.total_activities}}</td>
+               <td>{{member.completed_activities}}</td>
                <td>{{member.value}}</td>
             </tr>
          </tbody>

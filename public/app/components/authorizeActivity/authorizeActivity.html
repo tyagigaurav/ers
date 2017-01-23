@@ -1,0 +1,77 @@
+<div class="container">
+   <div class="row">
+   <h2>Authorize Activities </h2>
+
+  <div class="accordian" id="accordion">
+  <div class="panel panel-default" ng-repeat="manager in managers">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{manager.id}}">
+      <div class="col-md-6"><b>Manager Name: </b>{{manager.name}}</div>
+      <div class="col-md-6 pull-left"><b>Activities to Authorize: </b>{{manager.activities.length}}</div></a>
+      </div>
+    </div>
+    <div id="collapse{{manager.id}}" class="panel-collapse collapse">
+      <div class="panel-body">
+        
+        <table class="table table-hover">
+         <thead>
+            <tr>
+               <th><input type="checkbox" ng-click="toggleAll(manager)" ng-model="manager.isAllSelected"></th>
+               <th>Activity</th>
+               <th>Assigned To</th>
+               <th>Value</th>
+               <th>Action</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr ng-repeat="activity in manager.activities | orderBy:'-date'" >
+            <td><input type="checkbox" ng-model="activity.selected"></td>
+               <td>
+                     <a data-toggle="modal" data-target="#myModal{{activity.id}}">{{activity.name}}</a>
+                     
+                     <div class="modal fade" id="myModal{{activity.id}}" role="dialog">
+                         <div class="modal-dialog">
+                         
+                           <div class="modal-content">
+                             <div class="modal-header">
+                               <button type="button" class="close" data-dismiss="modal">&times;</button>
+                               <div  class="modal-title">
+                               <h4><b>Activity: </b>{{activity.name}}</h4>
+                                <h4><b>Reward: </b>{{activity.value}}</h4>
+                              </div>
+                             </div>
+                             <div class="modal-body">
+                              <b>Activity Description:</b><br/><br/>
+                              <p>{{activity.description}}</p>
+                             </div>
+                             <div class="modal-footer">
+                        <button class="btn btn-success" type="button" ng-click="actionOnActivity(activity, 'transfer')" ng-if="activity.status == 'Completed'" data-dismiss="modal">Transfer</button>
+                        <button class="btn btn-danger" type="button" ng-click="actionOnActivity(activity, 'cancel')" ng-if="activity.status == 'Completed'" data-dismiss="modal">Cancel</button>
+                               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                             </div>
+                           </div>
+                           
+                         </div>
+                       </div>
+
+
+               </td>
+               <td>{{activity.assigned_to}}</td>
+               <td>{{activity.value}}</td>
+               <td>
+                    <button type="button" class="btn btn-success" ng-click="actionOnActivity(activity, 'authorize')">Authorize</button>
+                    <button type="button" class="btn btn-danger" ng-click="actionOnActivity(activity, 'cancel')">Cancel</button>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <br/>
+      <button type="button" class="btn btn-lg btn-success" ng-click="actionOnActivities(manager)">Authorize All</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+   </div>
+</div>

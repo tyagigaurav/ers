@@ -1,0 +1,62 @@
+<div class="container">
+   <div class="row">
+   <h2>Activities </h2>
+      <table class="table table-hover">
+         <thead>
+            <tr>
+               <th>Activity</th>
+               <th>Assigned To</th>
+               <th>Date</th>
+               <th>Status</th>
+               <th>Value</th>
+               <th>Action</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr ng-repeat="activity in activities | orderBy:'-date'" >
+               <td>
+                     <a data-toggle="modal" data-target="#myModal{{activity.id}}">{{activity.name}}</a>
+                     
+                     <div class="modal fade" id="myModal{{activity.id}}" role="dialog">
+                         <div class="modal-dialog">
+                         
+                           <div class="modal-content">
+                             <div class="modal-header">
+                               <button type="button" class="close" data-dismiss="modal">&times;</button>
+                               <div  class="modal-title">
+                               <h4><b>Activity: </b>{{activity.name}}</h4>
+                                <h4><b>Reward: </b>{{activity.value}}</h4>
+                              </div>
+                             </div>
+                             <div class="modal-body">
+                              <b>Activity Description:</b><br/><br/>
+                              <p>{{activity.description}}</p>
+                             </div>
+                             <div class="modal-footer">
+                        <button class="btn btn-success" type="button" ng-click="actionOnActivity(activity, 'transfer')" ng-if="activity.status == 'Completed'" data-dismiss="modal">Transfer</button>
+                        <button class="btn btn-danger" type="button" ng-click="actionOnActivity(activity, 'cancel')" ng-if="activity.status == 'Completed'" data-dismiss="modal">Cancel</button>
+                               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                             </div>
+                           </div>
+                           
+                         </div>
+                       </div>
+
+
+               </td>
+               <td>{{activity.assigned_to}}</td>
+               <td>{{activity.date.format("MM-DD-YYYY")}}</td>
+               <td>{{activity.status}}
+               <img ng-src="{{imgSrc(activity.status)}}" title="{{activity.status}}"></td>
+               <td>{{activity.value}}</td>
+               <td>
+                  <div ng-if = "activity.status == 'Completed'">
+                     <button type="button" class="btn btn-success" ng-click="actionOnActivity(activity, 'transfer')">Transfer</button>
+                     <button type="button" class="btn btn-danger" ng-click="actionOnActivity(activity, 'cancel')">Cancel</button>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>

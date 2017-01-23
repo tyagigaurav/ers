@@ -52,10 +52,24 @@ app.post('/authenticate', function(req, res){
     }, 1000)
 });
 
-  app.post('/assignTask', function(req, res){
+  app.post('/api/assignActivity', function(req, res){
     res.setHeader('Content-Type', 'application/json');
     var data = {};
     data.message = "Activity Asssigned to Assignee!";
+    res.send(JSON.stringify(data));
+  });
+
+  app.post('/api/performActivity', function(req, res){
+    res.setHeader('Content-Type', 'application/json');
+    var data = {};
+    data.message = "Selected activity marked as " + req.body[0].action;
+    res.send(JSON.stringify(data));
+  });
+
+    app.post('/api/allotCoins', function(req, res){
+    res.setHeader('Content-Type', 'application/json');
+    var data = {};
+    data.message = "Coins alloted to Manager!";
     res.send(JSON.stringify(data));
   });
 

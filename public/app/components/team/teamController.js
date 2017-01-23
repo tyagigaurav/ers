@@ -1,11 +1,15 @@
 ersApp.controller('teamCtrl', function($scope, $state, membersService) {
 
-        membersService.getAllMembers().then(function(data) {
-        $scope.members = data;
-    });
+	$scope.assignorId = $scope.$parent.userId;
 
-    $scope.loadUser = function (userId) {
-    	$state.go("root.teamMember", {'userId':userId});
-    }
+	$scope.loadData = function(){
+
+        membersService.getAllMembers($scope.assignorId).then(function(data) {
+        $scope.members = data;
+   		})
+
+    };
+
+    $scope.loadData();
     
 });

@@ -1,13 +1,23 @@
 var ersApp = angular.module('ersApp', ['ui.router', 'chart.js', 'ngAnimate', 'ngNotify']);
 
-ersApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+ersApp.config(function($httpProvider, $stateProvider, $urlRouterProvider, $locationProvider) {
 
-//    $locationProvider.html5Mode({
-//        enabled: true,
-//        requireBase: false
-//    });
+    //    $locationProvider.html5Mode({
+    //        enabled: true,
+    //        requireBase: false
+    //    });
 
     $urlRouterProvider.otherwise('/login');
+
+    $httpProvider.interceptors.push(function($q) {
+        return {
+            'request': function(config) {
+
+                config.headers['token'] = +(localStorage.getItem("token"));
+                return config;
+            }
+        };
+    });
 
 });
 
@@ -20,7 +30,6 @@ ersApp.run(function($rootScope, $state, loginService, ngNotify) {
         }
 
         if (!loginService.isLoggedIn()) {
-            console.log('DENY');
             event.preventDefault();
             $state.go("login");
         }
