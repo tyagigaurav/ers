@@ -28,7 +28,10 @@ ersApp.controller('activitiesCtrl', function($scope, $state, activityService, ng
         }];
 
         activityService.actionOnActivity(data).then(function(data) {
-            ngNotify.set(data.message, 'success');
+            if(action == 'cancel')
+                ngNotify.set(data.message, 'error');
+            else
+                ngNotify.set(data.message, 'success');
             $scope.loadData();
         });
     }

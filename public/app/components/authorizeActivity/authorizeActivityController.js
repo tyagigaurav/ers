@@ -33,7 +33,10 @@ ersApp.controller('authorizeActivityCtrl', function($scope, $state, activityServ
         }];
 
         activityService.actionOnActivity(data).then(function(data) {
-            ngNotify.set(data.message, 'success');
+            if(action == 'cancel')
+                ngNotify.set(data.message, 'error');
+            else
+                ngNotify.set(data.message, 'success');
             $scope.loadData();
         });
     }
@@ -54,11 +57,14 @@ ersApp.controller('authorizeActivityCtrl', function($scope, $state, activityServ
             ngNotify.set("Please select atleast one checkbox", 'warn');
 
         }
+        else{
 
-        activityService.actionOnActivity(data).then(function(data) {
-            ngNotify.set(data.message, 'success');
-            $scope.loadData();
-        });
+            activityService.actionOnActivity(data).then(function(data) {
+                ngNotify.set(data.message, 'success');
+                $scope.loadData();
+            });
+
+        }
     }
 
     $scope.loadData();

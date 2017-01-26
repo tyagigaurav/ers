@@ -6,8 +6,10 @@
          </div>
          <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li ng-show="role == 'user'"><a>Total Reward Points {{value}}</a></li>
-               <li><a ng-click ="logout()">Log Out</a></li>
+                <li ng-show="role == 'user'"><a>Total Reward Points {{value}}</a></li>  
+                <li> <button type="button" class="btn btn-info navbar-btn" ng-click ="logout()">
+          <span class="glyphicon glyphicon-log-out"></span> Log out
+        </button></li>
             </ul>
          </div>
       </div>
